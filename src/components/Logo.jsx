@@ -6,7 +6,7 @@ const Logo = () => {
       <img
         src={`${process.env.PUBLIC_URL}/img/logo.svg`}
         alt="logo Sportsee"
-        className="logo"
+        className="logo w-[178px] mx-[28px] my-[18px]"
       />
     </div>
   );
