@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
+import dataMocked from "../ManageApi";
 
 const FetchData = (url, model) => {
   const [data, setData] = useState();
@@ -12,7 +13,11 @@ const FetchData = (url, model) => {
       try {
         await axios
           .get(url)
-          .then((response) => setData(new model(response.data.data)));
+          .then((response) =>
+            dataMocked
+              ? setData(new model(response.data))
+              : setData(new model(response.data.data))
+          );
       } catch (err) {
         console.log(err);
         setError(true);
