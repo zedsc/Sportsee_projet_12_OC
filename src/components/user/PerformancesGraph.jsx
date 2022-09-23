@@ -8,26 +8,26 @@ import {
 } from "recharts";
 import FetchData from "../../utils/hooks/FetchData";
 import PerfUserData from "../../utils/models/PerfUserData";
+import ErrorMsg from "../ErrorMsg";
 import Loader from "../Loader";
+import dataMocked from "../../utils/ManageApi";
 
 const PerformancesGraph = ({ userId, user }) => {
   const { data, dataLoaded, error } = FetchData(
-    `http://localhost:3001/user/${userId}/performance`,
+    dataMocked
+      ? `/user/${userId}/performance.json`
+      : `http://localhost:3001/user/${userId}/performance`,
     PerfUserData
   );
 
   const perfData = data;
   if (error) {
-    return (
-      <div className="error-api text-center mt-[10%] bg-[#FBFBFB]">
-        Oups, il y a eu un problème. Service indisponible ❌
-      </div>
-    );
+    return <ErrorMsg />;
   }
 
   return dataLoaded ? (
     <ResponsiveContainer
-      width="33%"
+      width="32%"
       height={260}
       className="rounded-md overflow-hidden"
     >

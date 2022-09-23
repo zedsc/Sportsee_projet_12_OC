@@ -11,7 +11,9 @@ import {
 } from "recharts";
 import FetchData from "../../utils/hooks/FetchData";
 import ActivityUserData from "../../utils/models/ActivityUserData";
+import ErrorMsg from "../ErrorMsg";
 import Loader from "../Loader";
+import dataMocked from "../../utils/ManageApi";
 
 const ActivityTooltip = ({ active, payload }) => {
   if (active) {
@@ -32,17 +34,15 @@ const ActivityTooltip = ({ active, payload }) => {
 
 const ActivityGraph = ({ userId }) => {
   const { data, dataLoaded, error } = FetchData(
-    `http://localhost:3001/user/${userId}/activity`,
+    dataMocked
+      ? `/user/${userId}/activity.json`
+      : `http://localhost:3001/user/${userId}/activity`,
     ActivityUserData
   );
 
   const activityData = data;
   if (error) {
-    return (
-      <div className="error-api text-center mt-[10%] bg-[#FBFBFB]">
-        Oups, il y a eu un problème. Service indisponible ❌
-      </div>
-    );
+    return <ErrorMsg />;
   }
 
   return dataLoaded ? (
@@ -56,10 +56,10 @@ const ActivityGraph = ({ userId }) => {
         height={300}
         data={activityData._activity}
         margin={{
-          top: 80,
+          top: 60,
           right: 0,
           left: 0,
-          bottom: 5,
+          bottom: 30,
         }}
         barSize={8}
         barGap={10}

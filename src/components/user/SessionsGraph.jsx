@@ -10,10 +10,11 @@ import {
 } from "recharts";
 import FetchData from "../../utils/hooks/FetchData";
 import SessionUserData from "../../utils/models/SessionUserData";
+import ErrorMsg from "../ErrorMsg";
 import Loader from "../Loader";
+import dataMocked from "../../utils/ManageApi";
 
 const SessionHover = ({ points }) => {
-  console.log(points, "========== points =======");
   return (
     <rect
       x={points[0].x}
@@ -44,22 +45,20 @@ const SessionTooltip = ({ active, payload }) => {
 
 const SessionsGraph = ({ userId }) => {
   const { data, dataLoaded, error } = FetchData(
-    `http://localhost:3001/user/${userId}/average-sessions`,
+    dataMocked
+      ? `/user/${userId}/sessions.json`
+      : `http://localhost:3001/user/${userId}/average-sessions`,
     SessionUserData
   );
 
   const sessionData = data;
   if (error) {
-    return (
-      <div className="error-api text-center mt-[10%] bg-[#FBFBFB]">
-        Oups, il y a eu un problème. Service indisponible ❌
-      </div>
-    );
+    return <ErrorMsg />;
   }
 
   return dataLoaded ? (
     <ResponsiveContainer
-      width="33%"
+      width="32%"
       height={260}
       className="rounded-md overflow-hidden"
     >
