@@ -10,11 +10,12 @@ import FetchData from "../../utils/hooks/FetchData";
 import PerfUserData from "../../utils/models/PerfUserData";
 import ErrorMsg from "../ErrorMsg";
 import Loader from "../Loader";
-import dataMocked from "../../utils/ManageApi";
+import PropTypes from "prop-types";
+import mockData from "../../utils/ManageApi";
 
 const PerformancesGraph = ({ userId, user }) => {
   const { data, dataLoaded, error } = FetchData(
-    dataMocked
+    mockData
       ? `/user/${userId}/performance.json`
       : `http://localhost:3001/user/${userId}/performance`,
     PerfUserData
@@ -58,6 +59,11 @@ const PerformancesGraph = ({ userId, user }) => {
   ) : (
     <Loader />
   );
+};
+
+PerformancesGraph.propTypes = {
+  userId: PropTypes.number,
+  user: PropTypes.object,
 };
 
 export default PerformancesGraph;
