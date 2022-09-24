@@ -13,7 +13,8 @@ import FetchData from "../../utils/hooks/FetchData";
 import ActivityUserData from "../../utils/models/ActivityUserData";
 import ErrorMsg from "../ErrorMsg";
 import Loader from "../Loader";
-import dataMocked from "../../utils/ManageApi";
+import PropTypes from "prop-types";
+import mockData from "../../utils/ManageApi";
 
 const ActivityTooltip = ({ active, payload }) => {
   if (active) {
@@ -34,7 +35,7 @@ const ActivityTooltip = ({ active, payload }) => {
 
 const ActivityGraph = ({ userId }) => {
   const { data, dataLoaded, error } = FetchData(
-    dataMocked
+    mockData
       ? `/user/${userId}/activity.json`
       : `http://localhost:3001/user/${userId}/activity`,
     ActivityUserData
@@ -57,7 +58,7 @@ const ActivityGraph = ({ userId }) => {
         data={activityData._activity}
         margin={{
           top: 60,
-          right: 0,
+          right: 10,
           left: 0,
           bottom: 30,
         }}
@@ -121,11 +122,18 @@ const ActivityGraph = ({ userId }) => {
           fill="#E60000"
           radius={[10, 10, 0, 0]}
         />
+        <text className="text-[0.938rem]" x="5%" y="14%" fill="#20253A">
+          Activité quotidienne
+        </text>
       </BarChart>
     </ResponsiveContainer>
   ) : (
     <Loader />
   );
+};
+
+ActivityGraph.propTypes = {
+  userId: PropTypes.number,
 };
 
 export default ActivityGraph;

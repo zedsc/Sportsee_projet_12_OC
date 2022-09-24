@@ -5,14 +5,14 @@ import {
   XAxis,
   YAxis,
   Tooltip,
-  Text,
   ResponsiveContainer,
 } from "recharts";
 import FetchData from "../../utils/hooks/FetchData";
 import SessionUserData from "../../utils/models/SessionUserData";
 import ErrorMsg from "../ErrorMsg";
 import Loader from "../Loader";
-import dataMocked from "../../utils/ManageApi";
+import PropTypes from "prop-types";
+import mockData from "../../utils/ManageApi";
 
 const SessionHover = ({ points }) => {
   return (
@@ -45,7 +45,7 @@ const SessionTooltip = ({ active, payload }) => {
 
 const SessionsGraph = ({ userId }) => {
   const { data, dataLoaded, error } = FetchData(
-    dataMocked
+    mockData
       ? `/user/${userId}/sessions.json`
       : `http://localhost:3001/user/${userId}/average-sessions`,
     SessionUserData
@@ -91,9 +91,6 @@ const SessionsGraph = ({ userId }) => {
           cursor={<SessionHover />}
           content={<SessionTooltip />}
         />
-        <Text fill="#FFFFFF" textAnchor="start" verticalAnchor="start">
-          Durée moyenne des sessions
-        </Text>
         <Line
           dataKey="sessionLength"
           yAxisId="right"
@@ -103,11 +100,31 @@ const SessionsGraph = ({ userId }) => {
           activeDot={{ r: 5 }}
           dot={false}
         />
+        <text
+          className="text-[0.938rem]"
+          x="10%"
+          y="16%"
+          fill="rgba(255, 255, 255, 0.6)"
+        >
+          Durée moyenne des
+        </text>
+        <text
+          className="text-[0.938rem]"
+          x="10%"
+          y="24%"
+          fill="rgba(255, 255, 255, 0.6)"
+        >
+          sessions
+        </text>
       </LineChart>
     </ResponsiveContainer>
   ) : (
     <Loader />
   );
+};
+
+SessionsGraph.propTypes = {
+  userId: PropTypes.number,
 };
 
 export default SessionsGraph;
