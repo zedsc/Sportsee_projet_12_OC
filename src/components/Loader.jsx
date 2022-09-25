@@ -2,7 +2,7 @@ import React from "react";
 
 const Loader = () => {
   return (
-    <div className="text-center">
+    <div className="text-center mt-[20%]">
       <div role="status">
         <svg
           className="inline mr-2 w-8 h-8 text-gray-200 animate-spin dark:text-gray-600 fill-red-600"
@@ -19,7 +19,7 @@ const Loader = () => {
             fill="currentFill"
           />
         </svg>
-        <span className="sr-only">Chargement...</span>
+        <span>Chargement...</span>
       </div>
     </div>
   );
