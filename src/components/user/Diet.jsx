@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 const Diet = ({ diet }) => {
   let img, unit, name;
@@ -22,7 +23,7 @@ const Diet = ({ diet }) => {
   }
 
   return (
-    <div className="flex flex-col bg-[#FBFBFB] mb-[35px]">
+    <div className="flex flex-col bg-[#FBFBFB] mb-[35px] rounded-md overflow-hidden pr-[30px]">
       <div className="nutrient flex p-[32px]">
         <img
           src={`${process.env.PUBLIC_URL}/img/ico-diet/${img}.svg`}
@@ -30,14 +31,18 @@ const Diet = ({ diet }) => {
           className="nutrient-img"
         />
         <div className="nutrient-txt ml-[24px]">
-          <p className="nutrient-value text-[20px] font-bold">
+          <p className="nutrient-value text-[1.25rem] font-bold ">
             {diet[1]} {unit}
           </p>
-          <p className="nutrient-unit text-[14px] text-[#74798C]">{name}</p>
+          <p className="nutrient-unit text-[0.875rem] text-[#74798C]">{name}</p>
         </div>
       </div>
     </div>
   );
+};
+
+Diet.propTypes = {
+  diet: PropTypes.object,
 };
 
 export default Diet;
