@@ -42,7 +42,7 @@ const Diet = ({ diet }) => {
 };
 
 Diet.propTypes = {
-  diet: PropTypes.object,
+  diet: PropTypes.array,
 };
 
 export default Diet;
