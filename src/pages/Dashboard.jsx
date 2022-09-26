@@ -43,11 +43,11 @@ const Dashboard = () => {
       <Header />
       <div className="wrapper-main-aside flex  h-[100%]">
         <Aside />
-        <main className="w-[100%] ml-[100px]">
+        <main className="w-[100%] ml-[50px] xl:ml-[100px]">
           <Name user={mainData} />
-          <section className="stats flex justify-between">
+          <section className="stats xl:flex justify-between">
             <h3 className="sr-only">Statistiques</h3>
-            <div className="charts w-[70%]">
+            <div className="charts xl:w-[70%]">
               <ActivityGraph userId={userId} />
               <div className="sess-perf-charts flex w-[100%] justify-around mt-[28px]">
                 <SessionsGraph userId={userId} />
@@ -55,7 +55,7 @@ const Dashboard = () => {
                 <ScoreGraph user={mainData} />
               </div>
             </div>
-            <div className="nutrients flex flex-col ml-[4%] mr-[8%] w-[30%]">
+            <div className="nutrients flex justify-between mr-[5%] xl:flex-col xl:ml-[4%] xl:mr-[8%] xl:w-[30%] mt-[20px] xl:mt-[0px]">
               {Object.entries(mainData.keyData).map((nutrient) => (
                 <Diet key={mainData.id + "-" + nutrient} diet={nutrient} />
               ))}

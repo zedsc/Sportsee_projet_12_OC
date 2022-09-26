@@ -28,14 +28,14 @@ const PerformancesGraph = ({ userId, user }) => {
 
   return dataLoaded ? (
     <ResponsiveContainer
-      width="32%"
+      width="33%"
       height={260}
       className="rounded-md overflow-hidden"
     >
       <RadarChart
         cx="50%"
         cy="50%"
-        outerRadius={90}
+        outerRadius={80}
         width={260}
         height={260}
         data={perfData._arrayPerf}

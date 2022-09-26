@@ -15,7 +15,7 @@ const Home = () => {
           </h1>
           <div className="user-select flex mt-[100px] justify-center">
             <NavLink to="/dashboard" state={18}>
-              <div className="user card w-[400px] h-[420px] mx-[40px] shadow-[0_2px_6px_0_rgba(0,0,0,0.35)] rounded-lg overflow-hidden">
+              <div className="user card xl:w-[400px] w-[350px] xl:h-[420px] h-[390px] mx-[40px] shadow-[0_2px_6px_0_rgba(0,0,0,0.35)] rounded-lg overflow-hidden">
                 <img
                   src={`${process.env.PUBLIC_URL}/img/persona_f.jpg`}
                   alt="Utilisateur 1"
@@ -24,7 +24,7 @@ const Home = () => {
               </div>
             </NavLink>
             <NavLink to="/dashboard" state={12}>
-              <div className="user card w-[400px] h-[420px] mx-[40px] shadow-[0_2px_6px_0_rgba(0,0,0,0.35)] rounded-lg overflow-hidden">
+              <div className="user card xl:w-[400px] w-[350px] xl:h-[420px] h-[390px] mx-[40px] shadow-[0_2px_6px_0_rgba(0,0,0,0.35)] rounded-lg overflow-hidden">
                 <img
                   src={`${process.env.PUBLIC_URL}/img/persona_m.jpg`}
                   alt="Utilisateur 2"
