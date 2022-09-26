@@ -1,70 +1,48 @@
-# Getting Started with Create React App
+![LogoSportsee](public/img/logo_sportsee.png)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+![HTML](https://img.shields.io/badge/HTML-239120?style=for-the-badge&logo=html5&logoColor=white)
+![Tailwind](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+Sportsee is an application for monitoring sportive daily activity. Especially the Dashboard page: this page will allow the user to follow the number of sessions carried out as well as the number of calories burned.
+Project 12 of the OpenClassrooms [JavaScript React Developer](https://openclassrooms.com/fr/paths/516-developpeur-dapplication-javascript-react) training program.
 
-### `npm start`
+#### Overview
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Work in progress 🚧
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+#### Resources
 
-### `npm test`
+[Figma model](https://www.figma.com/file/BMomGVZqLZb811mDMShpLu/UI-design-Sportify-FR?node-id=0%3A1) | [Kanban](https://www.notion.so/Tableau-de-bord-SportSee-6686aa4b5f44417881a4884c9af5669e)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Installation
 
-### `npm run build`
+You need to have **[Node.js v16.15 or higher](https://nodejs.org/en/)** installed on your computer.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Install [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/) on your system
+- Clone or download the project
+- Install dependencies with `npm i` or `yarn`
+- Start the project with `npm start` or `yarn start`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+#### Dependencies
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- [![React](https://img.shields.io/github/package-json/dependency-version/zedsc/sportsee/react)](https://reactjs.org/)
+- [![axios](https://img.shields.io/github/package-json/dependency-version/zedsc/sportsee/axios)](https://axios-http.com/docs/intro)
+- [![proptypes](https://img.shields.io/github/package-json/dependency-version/zedsc/sportsee/prop-types)](https://reactjs.org/docs/typechecking-with-proptypes.html#gatsby-focus-wrapper)
+- [![recharts](https://img.shields.io/github/package-json/dependency-version/zedsc/sportsee/recharts)](https://recharts.org/en-US/)
+- [![tailwindcss](https://img.shields.io/github/package-json/dependency-version/zedsc/sportsee/tailwindcss)](https://tailwindcss.com/)
 
-### `npm run eject`
+## Built with
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+[React](https://reactjs.org/)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+A JavaScript library for building user interfaces
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## License
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+This project is project 12 out of 14 of OpenClassrooms [JavaScript React Developer](https://openclassrooms.com/fr/paths/516-developpeur-dapplication-javascript-react) training. While you can reuse the code, visual resources may not be free of right.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Personas pictures designed by studiogstock / Freepik
