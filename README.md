@@ -47,6 +47,8 @@ This project is project 12 out of 14 of OpenClassrooms [JavaScript React Develop
 
 Personas pictures designed by studiogstock / Freepik
 
+---
+
 #### Skills & aim of the project
 
 - Ensuring the data quality of an application
