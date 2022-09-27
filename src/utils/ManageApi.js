@@ -1,5 +1,5 @@
-////// Switch between API & mocked datas /////////
+////// Switch between API & mock datas /////////
 
-const dataMocked = true;
+const mockData = true;
 
-export default dataMocked;
+export default mockData;
