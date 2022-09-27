@@ -46,3 +46,9 @@ A JavaScript library for building user interfaces
 This project is project 12 out of 14 of OpenClassrooms [JavaScript React Developer](https://openclassrooms.com/fr/paths/516-developpeur-dapplication-javascript-react) training. While you can reuse the code, visual resources may not be free of right.
 
 Personas pictures designed by studiogstock / Freepik
+
+### Skills & aim of the project
+
+- Ensuring the data quality of an application
+- Develop advanced graphical elements using JavaScript libraries
+- Interact with a web service
