@@ -14,6 +14,10 @@ import Loader from "../Loader";
 import PropTypes from "prop-types";
 import mockData from "../../utils/ManageApi";
 
+/**
+ * Custom hover: set a rectangle that is the same size as the chart, and is positioned at the x-coordinate of the mouse.
+ * @returns A rectangle with width and height of the chart.
+ */
 const SessionHover = ({ points }) => {
   return (
     <rect
@@ -26,6 +30,9 @@ const SessionHover = ({ points }) => {
   );
 };
 
+/**
+ * Custom linechart tooltip
+ */
 const SessionTooltip = ({ active, payload }) => {
   if (active) {
     return (
@@ -43,6 +50,9 @@ const SessionTooltip = ({ active, payload }) => {
   }
 };
 
+/**
+ *  @returns the linechart component.
+ */
 const SessionsGraph = ({ userId }) => {
   const { data, dataLoaded, error } = FetchData(
     mockData

@@ -14,6 +14,9 @@ import ErrorMsg from "../components/ErrorMsg";
 import MainUserData from "../utils/models/MainUserData";
 import mockData from "../utils/ManageApi";
 
+/**
+ *  @returns the dashboard page, including user informations (name, diet) + charts: barchart, linechart, radarchart and radial barchart.
+ */
 const Dashboard = () => {
   const location = useLocation();
   const userId = location.state;

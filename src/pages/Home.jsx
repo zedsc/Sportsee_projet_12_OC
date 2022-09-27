@@ -3,6 +3,9 @@ import Header from "../components/Header";
 import Aside from "../components/Aside";
 import { NavLink } from "react-router-dom";
 
+/**
+ *  @returns the home page: 2 personas faking user identification.
+ */
 const Home = () => {
   return (
     <div className="main-wrapper mx-auto h-[100%]">

@@ -13,6 +13,9 @@ import Loader from "../Loader";
 import PropTypes from "prop-types";
 import mockData from "../../utils/ManageApi";
 
+/**
+ *  @returns the radarchart component.
+ */
 const PerformancesGraph = ({ userId, user }) => {
   const { data, dataLoaded, error } = FetchData(
     mockData

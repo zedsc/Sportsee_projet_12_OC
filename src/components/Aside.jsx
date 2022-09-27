@@ -1,5 +1,10 @@
 import React from "react";
 
+/**
+ * It returns the aside navigation, on the left.
+ * Hidden on small screens.
+ * @returns the aside navigation component.
+ */
 const Aside = () => {
   return (
     <aside className="hidden lg:sticky float-left h-screen w-28 bg-black top-0 z-30 flex-col lg:flex justify-around items-center">

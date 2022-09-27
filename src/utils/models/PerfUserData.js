@@ -1,8 +1,14 @@
 export default class PerfUserData {
-  constructor(dataPerf) {
-    this._id = dataPerf.userId;
+  /**
+   * Associate the kind value (number) with each performance (string) from array translatePerf.
+   * @param {object} data
+   * @returns object with kind value replaced by strings
+   */
+
+  constructor(data) {
+    this._id = data.userId;
     this._translateKind = this.performanceKind();
-    this._rawArrayPerf = dataPerf.data.map((obj, kind) => ({
+    this._rawArrayPerf = data.data.map((obj, kind) => ({
       value: obj.value,
       kind: this._translateKind[kind],
     }));

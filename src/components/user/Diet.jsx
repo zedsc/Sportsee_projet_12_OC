@@ -1,9 +1,15 @@
 import React from "react";
 import PropTypes from "prop-types";
 
+/**
+ * @returns A component with the diet's name, value and unit.
+ */
 const Diet = ({ diet }) => {
   let img, unit, name;
 
+  /**
+   * Set the component content.
+   */
   if (diet.includes("calorieCount")) {
     img = "calories-icon";
     unit = "kCal";

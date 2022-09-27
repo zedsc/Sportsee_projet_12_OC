@@ -7,6 +7,9 @@ import {
 } from "recharts";
 import PropTypes from "prop-types";
 
+/**
+ *  @returns the radial barchart component.
+ */
 const ScoreGraph = ({ user }) => {
   const userScore = [
     { name: user._firstName, score: user._score, fill: "#FF0000" },

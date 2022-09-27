@@ -1,7 +1,13 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
-import dataMocked from "../ManageApi";
+import mockData from "../ManageApi";
 
+/**
+ * Fetch data from an API, then returns formatted datas according to chosen model (class).
+ * @param {string} url
+ * @param {class} model
+ * @returns An object with dataLoaded, data, and error.
+ */
 const FetchData = (url, model) => {
   const [data, setData] = useState();
   const [dataLoaded, setDataLoaded] = useState(false);
@@ -14,7 +20,7 @@ const FetchData = (url, model) => {
         await axios
           .get(url)
           .then((response) =>
-            dataMocked
+            mockData
               ? setData(new model(response.data))
               : setData(new model(response.data.data))
           );

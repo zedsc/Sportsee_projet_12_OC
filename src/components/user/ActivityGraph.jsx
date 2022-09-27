@@ -16,6 +16,9 @@ import Loader from "../Loader";
 import PropTypes from "prop-types";
 import mockData from "../../utils/ManageApi";
 
+/**
+ * Custom barchart tooltip
+ */
 const ActivityTooltip = ({ active, payload }) => {
   if (active) {
     return (
@@ -33,6 +36,9 @@ const ActivityTooltip = ({ active, payload }) => {
   }
 };
 
+/**
+ *  @returns the barchart component.
+ */
 const ActivityGraph = ({ userId }) => {
   const { data, dataLoaded, error } = FetchData(
     mockData
@@ -68,11 +74,7 @@ const ActivityGraph = ({ userId }) => {
         style={{ backgroundColor: "#FBFBFB" }}
       >
         <CartesianGrid strokeDasharray="4 1 2" vertical={false} />
-        <XAxis
-          dataKey="day"
-          // padding={{ left: -25, right: -25 }}
-          tickMargin={16}
-        />
+        <XAxis dataKey="day" tickMargin={16} />
         <YAxis
           yAxisId="left"
           dataKey="kcal"

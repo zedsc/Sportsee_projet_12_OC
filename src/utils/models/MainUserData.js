@@ -1,4 +1,9 @@
 export default class MainUserData {
+  /**
+   * @param {object} data
+   * @returns object with formatted score
+   */
+
   constructor(data) {
     this._id = data.id;
     this._firstName = data.userInfos.firstName;
