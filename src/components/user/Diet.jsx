@@ -29,7 +29,7 @@ const Diet = ({ diet }) => {
   }
 
   return (
-    <div className="flex flex-col bg-[#FBFBFB] xl:mb-[35px] rounded-md overflow-hidden pr-[30px]">
+    <div className="flex flex-col bg-[#FBFBFB] xl:mb-[35px] rounded-md overflow-hidden xl:pr-[30px]">
       <div className="nutrient flex p-[20px] xl:p-[32px]">
         <img
           src={`${process.env.PUBLIC_URL}/img/ico-diet/${img}.svg`}
