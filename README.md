@@ -12,9 +12,7 @@ Project 12 of the OpenClassrooms [JavaScript React Developer](https://openclassr
 
 #### Overview
 
-👉 **[Live demo](https://fluffy-cajeta-bb5603.netlify.app/)**
-
-[![Netlify Status](https://api.netlify.com/api/v1/badges/fd50ab03-d5c1-43f9-978a-e346639ed567/deploy-status)](https://app.netlify.com/sites/fluffy-cajeta-bb5603/deploys)
+👉 **[Live demo](https://sportsee-zedsc.netlify.app/)**
 
 #### Resources
 
